@@ -9,7 +9,7 @@ import PageNotFound from './components/PageNotFound';
 function App() {
   return (
     <UserProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL || '/'}>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
